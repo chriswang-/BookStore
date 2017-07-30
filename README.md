@@ -37,7 +37,7 @@ Dependencies:
 
 API description:
 
-	Anonymous API:
+	Anonymous API(GET API):
 	* /login
 	* /logout
 	* /api/books/get/{id}
@@ -59,55 +59,55 @@ API description:
 
 Ajax Based JSP Description:
 	
-* open the url localhost:8080 to show the site in chrome 
+	open the url localhost:8080 to show the site in chrome 
 	
-	* home.jsp (home page)
-	* books.jsp (books block in home page)
-	* user.jsp (user block in home page[up-right])
-	* login.jsp (login dialog block in home page[shown when click login button])
-	--
-	* BookController (handling book related)
-	* UserController (handling user related)
+		* home.jsp (home page)
+		* books.jsp (books block in home page)
+		* user.jsp (user block in home page[up-right])
+		* login.jsp (login dialog block in home page[shown when click login button])
+		---
+		* BookController (handling book related)
+		* UserController (handling user related)
 	
 Access Restful API by command line(CLI):
 
-* We can use curl tool to access the BookStore's backend by command line. 
-	
-	Login:
-		curl -d username=user -d password=user  --cookie-jar ./cookie -L http://localhost:8080/login | jq .
-	
-	Init database(Admin role):
-		curl --cookie ./cookie -X POST -H "Content-type: application/json" -X POST http://localhost:8080/api/books/admin/init -d '
-			{
-				"url":"https://raw.githubusercontent.com/contribe/contribe/dev/bookstoredata/bookstoredata.txt",
-				"splitter":";"
+	We can use curl tool to access the BookStore's backend by command line. 
+		
+		Login:
+			curl -d username=user -d password=user  --cookie-jar ./cookie -L http://localhost:8080/login | jq .
+		
+		Init database(Admin role):
+			curl --cookie ./cookie -X POST -H "Content-type: application/json" -X POST http://localhost:8080/api/books/admin/init -d '
+				{
+					"url":"https://raw.githubusercontent.com/contribe/contribe/dev/bookstoredata/bookstoredata.txt",
+					"splitter":";"
 
-			} 
-			' | jq .
+				} 
+				' | jq .
 
-	Put a new book(Admin role):
-		curl --cookie ./cookie -X POST -H "Content-type: application/json" -X POST http://localhost:8080/api/books/admin/add -d '
-			{
-				"title":"Gone with wind",
-				"author":"kris",
-				"price":123.99,
-				"quantity":200
-			}
-			' | jq .	
+		Put a new book(Admin role):
+			curl --cookie ./cookie -X POST -H "Content-type: application/json" -X POST http://localhost:8080/api/books/admin/add -d '
+				{
+					"title":"Gone with wind",
+					"author":"kris",
+					"price":123.99,
+					"quantity":200
+				}
+				' | jq .	
 
-	Get a book:
-		curl --cookie ./cookie http://localhost:8080/api/books/get/1 | jq .
+		Get a book:
+			curl --cookie ./cookie http://localhost:8080/api/books/get/1 | jq .
 
-	Get a book by title:
-		curl --cookie ./cookie http://localhost:8080/api/books/get/Gone%20with%20wind | jq .
-	
-	List books:
-		curl --cookie ./cookie http://localhost:8080/api/books/list | jq .
+		Get a book by title:
+			curl --cookie ./cookie http://localhost:8080/api/books/get/Gone%20with%20wind | jq .
+		
+		List books:
+			curl --cookie ./cookie http://localhost:8080/api/books/list | jq .
 
-	List books by keyword
-		curl --cookie ./cookie http://localhost:8080/api/books/list/Gone%20with%20wind | jq .
+		List books by keyword
+			curl --cookie ./cookie http://localhost:8080/api/books/list/Gone%20with%20wind | jq .
 
-	
+		
 
 		
 	
