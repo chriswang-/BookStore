@@ -4,6 +4,8 @@ Intro
 
 BookStore demonstration, written by Spring boot1.5 & Boostrap4. Providing a full function by Restful api to meet the requirement of separation between frontend and backend . This project's frontend was done by Spring MVC. But was a little bit different from the traditional jsp/servlet website, Maybe, we can named it as 'partial refresh'.  Means, we use ajax tech to refresh a block in partial page.  The cost of development & study is less. But it will improve the user friendly effectively. 
 
+![](https://raw.githubusercontent.com/chriswang-/BookStore/master/src/main/resources/static/img/screenshot.png) | width=300
+
 Demo show
 * [https://youtu.be/929qJmgO93Y](https://youtu.be/929qJmgO93Y)
 
@@ -20,7 +22,7 @@ Technical Features:
 * Well design for the purpose of distinction between frontend and backend
 * JPA/Embedded dataBase
 * Authentication system based on Spring Security
-* DataBase/Data Init Interface
+* DataBase/Data Init Interface, It is a batch job internal, The bad data will be rejected, and prompt to user and the good data will be commited to the database.
 
 
 Testing:
