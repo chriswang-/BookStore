@@ -73,10 +73,10 @@ Access Restful API by command line(CLI):
 
 	We can use curl tool to access the BookStore's backend by command line. 
 		
-		Login:
+		* Login:
 			curl -d username=user -d password=user  --cookie-jar ./cookie -L http://localhost:8080/login | jq .
 		
-		Init database(Admin role):
+		* Init database(Admin role):
 			curl --cookie ./cookie -X POST -H "Content-type: application/json" -X POST http://localhost:8080/api/books/admin/init -d '
 				{
 					"url":"https://raw.githubusercontent.com/contribe/contribe/dev/bookstoredata/bookstoredata.txt",
@@ -85,7 +85,7 @@ Access Restful API by command line(CLI):
 				} 
 				' | jq .
 
-		Put a new book(Admin role):
+		* Put a new book(Admin role):
 			curl --cookie ./cookie -X POST -H "Content-type: application/json" -X POST http://localhost:8080/api/books/admin/add -d '
 				{
 					"title":"Gone with wind",
@@ -95,16 +95,16 @@ Access Restful API by command line(CLI):
 				}
 				' | jq .	
 
-		Get a book:
+		* Get a book:
 			curl --cookie ./cookie http://localhost:8080/api/books/get/1 | jq .
 
-		Get a book by title:
+		* Get a book by title:
 			curl --cookie ./cookie http://localhost:8080/api/books/get/Gone%20with%20wind | jq .
 		
-		List books:
+		* List books:
 			curl --cookie ./cookie http://localhost:8080/api/books/list | jq .
 
-		List books by keyword
+		* List books by keyword
 			curl --cookie ./cookie http://localhost:8080/api/books/list/Gone%20with%20wind | jq .
 
 		
