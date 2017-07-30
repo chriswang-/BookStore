@@ -2,7 +2,7 @@
 
 Intro:
 
-BookStore demonstration, written by Spring boot1.5 & Boostrap4. Providing a full function by Restful api to meet the requirement of separation between frontend and backend . This project's frontend was done by Spring MVC. But was a little bit different from the traditional jsp/servlet website, Maybe, we can named it as 'partial refresh'.  Means, we use ajax tech to refresh a block in partial page.  The cost of development & study is less. But it will improve the user friendly effectively. 
+BookStore demonstration, written by Spring boot1.5 & Boostrap4. Providing a full function by Restful api to meet the requirement of separation between frontend and backend . This project's frontend has been done by Spring MVC. But there is a little bit different from the traditional jsp/servlet website, Maybe, we can named it as 'partial refresh'.  Means, we use ajax tech to refresh a block in partial page.  The cost of development & study is less. But it will improve the user friendly effectively. 
 
 Screenshot:
 ![](https://raw.githubusercontent.com/chriswang-/BookStore/master/src/main/resources/static/img/screenshot.png) 
