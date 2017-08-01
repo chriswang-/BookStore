@@ -25,7 +25,7 @@ tbody th.DOES_NOT_EXIST {
 <script>
 
 $('.custom-control-input').change(function() {   	
-	var prcStr = $(this).data("price");
+	var prcStr = $(this).data("price") + ""; //stringfiy.
 	var prc = Number(prcStr.replace(/[^0-9\.]+/g,""));
 
 	var tPrcStr = $('strong').text();
