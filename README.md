@@ -7,8 +7,11 @@ BookStore demonstration, written by Spring boot1.5 & Boostrap4. Providing a full
 Screenshot:
 ![](https://raw.githubusercontent.com/chriswang-/BookStore/master/src/main/resources/static/img/screenshot.png) 
 
-Demo show:
-* [https://youtu.be/929qJmgO93Y](https://youtu.be/929qJmgO93Y)
+Run in dev:
+If you are using the IntelliJ, You could config a Maven run:
+
+* The Working Directory is your local working dir, something looks like: c:/github/test/BookStore
+* The Command Line will be: spring-boot:run
 
 Business Functions:
 
